@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chúc Mừng Sinh Nhật!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fredoka&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <h1>🎉 Chúc Mừng Sinh Nhật 🎉</h1>
+
+  <!-- Nút kích hoạt bánh kem -->
+  <button id="showCakeBtn">🍰 Bánh kem!</button>
+
+  <!-- Bánh sinh nhật -->
+  <div class="cake">
+    <div class="velas">
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+      <div class="fuego"></div>
+    </div>
+    <div class="cobertura"></div>
+    <div class="bizcocho"></div>
+  </div>
+  <button id="lightCandleBtn" style="display: none;">🕯️ Thắp nến!</button>
+    <p id="typedText"></p>
+
+<div class="hidden-part">  <h2>🌸 Những Khoảnh Khắc Đáng Nhớ 🌸</h2>
+
+<div class="giant-gift-box" id="giftBox">
+  <div class="gift-icon">🎁</div>
+  <p class="gift-label">Bấm để mở hộp quà ký ức</p>
+
+  <div class="flip-container">
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="ky-niem1.jpg" alt="Kỷ niệm 1" />
+      </div>
+      <div class="flip-back">
+        <h3>Buổi tiệc sinh nhật năm ngoái 🎉</h3>
+        <p>Khoảnh khắc đầy tiếng cười bên gia đình và bạn bè. Một ngày thật ấm áp và trọn vẹn 💖</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="ky-niem2.jpg" alt="Kỷ niệm 2" />
+      </div>
+      <div class="flip-back">
+        <h3>Chuyến du lịch đáng nhớ 🌴</h3>
+        <p>Cùng nhau khám phá vùng biển lộng gió, ghi lại những kỷ niệm không thể nào quên 🌊</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="ky-niem3.jpg" alt="Kỷ niệm 3" />
+      </div>
+      <div class="flip-back">
+        <h3>Những phút giây giản dị ☕</h3>
+        <p>Chỉ cần một cái ôm, một tách trà ấm và người bạn quý mến cũng đã là món quà tuyệt vời nhất 💫</p>
+      </div>
+    </div>
+  </div>
+    <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="ky-niem3.jpg" alt="Kỷ niệm 3" />
+      </div>
+      <div class="flip-back">
+        <h3>Những phút giây giản dị ☕</h3>
+        <p>Chỉ cần một cái ôm, một tách trà ấm và người bạn quý mến cũng đã là món quà tuyệt vời nhất 💫</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div></div>
+
+
+
+
+  <script src="script.js"></script>
+
+<div id="balloon-container"></div>
+<canvas id="starCanvas"></canvas>
+<audio id="bgMusic" autoplay >
+  <source src="nhac-sinh-nhat.mp3" type="audio/mpeg">
+</audio>
+  <button id="toggleMusicBtn">🔊 Bật nhạc</button>
+</body>
+</html>

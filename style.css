@@ -1,0 +1,424 @@
+/* === CÀI ĐẶT CHUNG === */
+body {
+  background-color: #ffe6f0;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #ff3399;
+  font-size: 3em;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #cc3366;
+  font-family: 'Pacifico', cursive;
+  margin-top: 60px;
+  font-size: 2em;
+}
+
+.blessing {
+  font-size: 1.5em;
+  color: #660033;
+  font-family: 'Fredoka', cursive;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.hidden-part {
+  display: none;
+}
+
+#typedText {
+  font-family: 'Fredoka', cursive;
+  font-size: 1.5em;
+  color: #660033;
+  white-space: pre-wrap;
+  display: none;
+  margin-top: 30px;
+  position: relative;
+}
+
+/* === NÚT BẤM === */
+button {
+  font-family: 'Fredoka', cursive;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#showCakeBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 14px 28px;
+  font-size: 1.3em;
+  color: white;
+  background: linear-gradient(135deg, #fba5d0, #ff66b2);
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
+}
+
+#showCakeBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(255, 105, 180, 0.5);
+}
+
+#showCakeBtn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+}
+
+#lightCandleBtn {
+  display: none; /* Ẩn ban đầu */
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background: linear-gradient(135deg, #ffd6e8, #ff66b2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Fredoka', cursive;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
+  transition: transform 0.2s ease;
+}
+#lightCandleBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4);
+}
+#toggleMusicBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  font-size: 1em;
+  background: linear-gradient(135deg, #ff99cc, #ff66b2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Fredoka', cursive;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+  z-index: 1000;
+}
+
+/* === BÁNH KEM === */
+.cake {
+  position: relative;
+  display: none;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 200px;
+}
+
+.cake::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 300px;
+}
+
+/* === NẾN === */
+.velas {
+  background: #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -7.5px;
+  margin-top: -50px;
+  width: 15px;
+  height: 50px;
+}
+
+.velas::after,
+.velas::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6.66px;
+  background: rgba(255, 0, 0, 0.4);
+}
+
+.velas::after { top: 25%; left: 0; }
+.velas::before { top: 45%; left: 0; }
+
+/* === LỬA NẾN === */
+.fuego {
+  display: none;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 37.5px;
+  border-radius: 100%;
+  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+}
+
+.fuego:nth-child(1) { animation: fuego 2s infinite; }
+.fuego:nth-child(2) { animation: fuego 1.5s infinite; }
+.fuego:nth-child(3) { animation: fuego 1s infinite; }
+.fuego:nth-child(4) { animation: fuego 0.5s infinite; }
+.fuego:nth-child(5) { animation: fuego 0.2s infinite; }
+
+@keyframes fuego {
+  0%   { background: rgba(254, 248, 97, 0.5); transform: translateY(0) scale(1); }
+  50%  { background: rgba(255, 50, 0, 0.1); transform: translateY(-60px) scale(0); }
+  100% { background: rgba(254, 248, 97, 0.5); transform: translateY(0) scale(1); }
+}
+
+/* === PHẦN BÁNH === */
+.cobertura {
+  background: #ece7e3;
+  border-radius: 150px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-left: -83.33px;
+  margin-top: -15px;
+  width: 166.67px;
+  height: 37.5px;
+  z-index: 10;
+}
+
+.cobertura::after,
+.cobertura::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  background: #ece7e3;
+  border-radius: 300px;
+}
+
+.cobertura::after { top: 20px; right: 42.85px; }
+.cobertura::before { top: 30px; right: 27.27px; }
+
+.bizcocho {
+  background: #6d3826;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -75px;
+  width: 150px;
+  height: 100px;
+}
+
+.bizcocho::after,
+.bizcocho::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  background: rgba(236, 231, 227, 0.6);
+}
+
+.bizcocho::after { top: 30%; }
+.bizcocho::before { top: 60%; }
+
+/* === HỘP QUÀ & KỶ NIỆM === */
+.giant-gift-box {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.gift-icon {
+  font-size: 80px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gift-icon:hover {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.gift-label {
+  font-size: 1.2em;
+  color: #cc0066;
+  margin-top: 10px;
+  font-family: 'Fredoka', cursive;
+}
+
+.flip-container {
+  display: none;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.giant-gift-box.open .flip-container {
+  display: flex;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 360px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-back {
+  background: #fff0f8;
+  padding: 20px;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.flip-back h3 {
+  font-family: 'Pacifico', cursive;
+  color: #cc0066;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.flip-back p {
+  font-size: 1em;
+  color: #660033;
+  line-height: 1.5;
+}
+
+/* === SAO RƠI === */
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === BONG BÓNG BAY === */
+.balloon {
+    position: absolute;
+      top: 100%; /* thêm dòng này */
+    width: 100px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgba(192, 1, 5, 0.4);
+    animation: move-up 5s ;
+}
+.balloon::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 150px;
+    background-color: white;
+    top: 110px;
+    left: 50px;
+}
+.balloon::after {
+    position: absolute;
+    content: '';
+    border-bottom: 12px solid red;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: 109px;
+    left: 41px;
+}
+.balloon:nth-child(2) {
+    left: 80px;
+    background-color: rgba(0, 0, 255, 0.5);
+    animation-duration: 3s;
+}
+.balloon:nth-child(2)::after {
+    border-bottom: 12px solid blue;
+}
+.balloon:nth-child(3) {
+    left: 150px;
+    background-color: rgba(255, 255, 0, 0.5);
+    animation-duration: 2s;
+}
+.balloon:nth-child(3)::after {
+    border-bottom: 12px solid yellow;
+}
+.balloon:nth-child(4) {
+    left: 200px;
+    background-color: rgba(0, 128, 0, 0.5);
+    animation-duration: 3s;
+}
+.balloon:nth-child(4)::after {
+    border-bottom: 12px solid green;
+}
+.balloon:nth-child(5) {
+    left: 250px;
+    background-color: rgba(192, 1, 5, 0.5);
+    animation-duration: 4s;
+}
+.balloon:nth-child(6) {
+    left: 310px;
+    background-color: rgba(255, 165, 0, 0.5);
+    animation-duration: 3s;
+}
+.balloon:nth-child(6)::after {
+    border-bottom: 12px solid orange;
+}
+.balloon:nth-child(7) {
+    left: 400px;
+    background-color: rgba(192, 1, 5, 0.5);
+    animation-duration: 5s;
+}
+.balloon:nth-child(8) {
+    left: 430px;
+    background-color: rgba(192, 1, 5, 0.5);
+    animation-duration: 2s;
+}
+@keyframes move-up {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
