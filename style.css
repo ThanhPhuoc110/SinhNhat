@@ -36,8 +36,7 @@ h2 {
 }
 
 #typedText {
-  font-family:'Courier New', Courier, monospace;
-  font-weight: 500;
+  font-family: 'Dancing Script', cursive;  font-weight: 500;
   font-size: 1.5em;
   color: #660033;
   white-space: pre-wrap;
@@ -92,6 +91,8 @@ font-weight: bold;
 }
 #toggleMusicBtn {
   position: fixed;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
   bottom: 20px;
   right: 20px;
   padding: 10px 16px;
@@ -288,7 +289,7 @@ font-weight: bold;
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-inner {
+.flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
 }
 
