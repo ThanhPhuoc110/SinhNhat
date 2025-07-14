@@ -3,6 +3,7 @@ body {
   background-color: #ffe6f0;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
+  font-size: 2vw;
   padding: 50px;
   margin: 0;
   overflow-x: hidden;
@@ -219,6 +220,8 @@ button {
 .bizcocho::before {
   content: "";
   position: absolute;
+    top: 60px; /* hoặc 60px tùy vị trí mong muốn */
+  left: 0; 
   width: 100%;
   height: 15px;
   background: rgba(236, 231, 227, 0.6);
@@ -270,15 +273,18 @@ button {
 
 .flip-card {
   background-color: transparent;
-  width: 280px;
-  height: 360px;
+  width: 100%;
+  max-width: 320px;
+  height: 220px;
   perspective: 1000px;
+    margin: 0 auto;
 }
 
 .flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
+    text-align: center;
   transition: transform 0.7s ease;
   transform-style: preserve-3d;
 }
@@ -306,7 +312,7 @@ button {
 
 .flip-back {
   background: #fff0f8;
-  padding: 20px;
+  margin: auto;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -414,11 +420,16 @@ button {
     animation-duration: 2s;
 }
 @keyframes move-up {
-    0% {
-        top: 100%;
-    }
-    100% {
-        top: 0%;
-    }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
 }
 

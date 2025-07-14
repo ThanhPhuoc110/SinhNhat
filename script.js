@@ -6,7 +6,7 @@ const giftBox = document.getElementById("giftBox");
 const giftIcon = document.querySelector(".gift-icon");
 const giftLabel = document.querySelector(".gift-label");
 const memories = document.querySelector(".all-memories");
-const wish = "Chúc bạn một ngày sinh nhật thật tuyệt vời, tràn ngập niềm vui, hạnh phúc và những điều bất ngờ dễ thương!\n🎈🎈🎈🎁💖💖💖";
+const wish = "Chúc em bé Tiên của anh có một ngày sinh nhật thật tuyệt vời, tràn ngập niềm vui, hạnh phúc và những điều bất ngờ dễ thương nha!\n💖💖💖Love You💖💖💖";
 function typeEffect(text, speed = 40) {
   typedText.textContent = "";
   let i = 0;
@@ -54,11 +54,11 @@ function createBalloon() {
   balloon.style.left = `${Math.random() * 100}%`;
   balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 70%)`;
   container.appendChild(balloon);
-  setTimeout(() => balloon.remove(), 7000);
+  setTimeout(() => balloon.remove(), 5000);
 }
 
 // Tạo nhiều bóng mỗi lần
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 17; i++) {
   setTimeout(createBalloon, i * 150);
 }
 const canvas = document.getElementById("starCanvas");
