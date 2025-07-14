@@ -106,23 +106,5 @@ function drawStars() {
 
 drawStars();
 
-const music = document.getElementById('bgMusic');
-    const btn = document.getElementById('playBtn');
 
-    // Thử tự động phát
-    window.addEventListener('load', () => {
-      const playPromise = music.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Nếu không được, hiện nút để người dùng bấm
-          btn.style.display = 'inline-block';
-        });
-      }
-    });
-
-    // Khi bấm nút, phát nhạc
-    btn.addEventListener('click', () => {
-      music.play();
-      btn.style.display = 'none';
-    });
 
