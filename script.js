@@ -106,24 +106,23 @@ function drawStars() {
 
 drawStars();
 
-const music = document.getElementById("bgMusic");
-const toggleBtn = document.getElementById("toggleMusicBtn");
+const music = document.getElementById('bgMusic');
+    const btn = document.getElementById('playBtn');
 
-toggleBtn.addEventListener("click", () => {
-  if (music.paused) {
-    music.play().catch(err => console.log("Không phát được nhạc:", err));
-    toggleBtn.textContent = "🔇 Tắt nhạc";
-  } else {
-    music.pause();
-    toggleBtn.textContent = "🔊 Bật nhạc";
-  }
-});
+    // Thử tự động phát
+    window.addEventListener('load', () => {
+      const playPromise = music.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Nếu không được, hiện nút để người dùng bấm
+          btn.style.display = 'inline-block';
+        });
+      }
+    });
 
-// Cập nhật nội dung nút theo trạng thái thực tế
-music.addEventListener("playing", () => {
-  toggleBtn.textContent = "🔇 Tắt nhạc";
-});
-music.addEventListener("pause", () => {
-  toggleBtn.textContent = "🔊 Bật nhạc";
-});
+    // Khi bấm nút, phát nhạc
+    btn.addEventListener('click', () => {
+      music.play();
+      btn.style.display = 'none';
+    });
 
