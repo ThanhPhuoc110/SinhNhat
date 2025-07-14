@@ -36,7 +36,7 @@ h2 {
 }
 
 #typedText {
-  font-family: 'Fredoka', cursive;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5em;
   color: #660033;
   white-space: pre-wrap;
@@ -83,7 +83,6 @@ button {
   color: white;
   border: none;
   border-radius: 10px;
-  font-family: 'Fredoka', cursive;
   cursor: pointer;
   box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
   transition: transform 0.2s ease;
