@@ -36,7 +36,8 @@ h2 {
 }
 
 #typedText {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 500;
   font-size: 1.5em;
   color: #660033;
   white-space: pre-wrap;
@@ -76,16 +77,14 @@ button {
 
 #lightCandleBtn {
   display: none; /* Ẩn ban đầu */
+  font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
   margin: 20px auto;
-  padding: 12px 24px;
-  font-size: 1.1em;
-  background: linear-gradient(135deg, #ffd6e8, #ff66b2);
+  padding: 14px 28px;
+  font-size: 1.3em;
   color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 6px 14px rgba(255, 105, 180, 0.3);
-  transition: transform 0.2s ease;
+  background: linear-gradient(135deg, #fba5d0, #ff66b2);
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
 }
 #lightCandleBtn:hover {
   transform: translateY(-2px);
@@ -249,7 +248,8 @@ button {
   font-size: 1.2em;
   color: #cc0066;
   margin-top: 10px;
-  font-family: 'Fredoka', cursive;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 550;
 }
 
 .flip-container {
