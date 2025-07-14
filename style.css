@@ -434,7 +434,7 @@ font-weight: bold;
 }
 #audioPlayer,
 #audio {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   width: 60px;
